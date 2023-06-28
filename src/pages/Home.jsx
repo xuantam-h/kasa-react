@@ -1,7 +1,7 @@
-function Home() {
+const Home = () => {
     return (
       <div className="Home">
-        <p>Home</p>
+        <h1>HOME</h1>
       </div>
     );
 }

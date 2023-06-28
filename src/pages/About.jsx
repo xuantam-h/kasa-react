@@ -1,7 +1,7 @@
-function About() {
+const About = () => {
     return (
       <div className="About">
-        <p>About</p>
+        <h1>ABOUT</h1>
       </div>
     );
 }
