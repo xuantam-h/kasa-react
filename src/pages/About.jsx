@@ -1,7 +1,9 @@
+import Banner from '../components/Banner'; 
+
 const About = () => {
     return (
       <div className="About">
-        <h1>ABOUT</h1>
+        <Banner title="A propos" alt="A propos"/>
       </div>
     );
 }

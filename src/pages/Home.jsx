@@ -1,10 +1,13 @@
+import Banner from '../components/Banner'; 
+import BannerImage from '../assets/banner-home.jpg'; 
+
 const Home = () => {
     return (
       <div className="Home">
-        <h1>HOME</h1>
+        <Banner title="Chez vous, partout et ailleurs" src={BannerImage} alt="Test"/>
       </div>
     );
 }
   
-  export default Home;
+export default Home;
   

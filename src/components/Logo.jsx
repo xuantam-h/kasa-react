@@ -1,6 +1,8 @@
+import logo from '../assets/logo.svg'
+
 const Logo = () => {
     return (
-      <p>Logo</p>
+      <img src={logo} alt='Logo Kasa' className='header-logo' />
     );
 }
   
