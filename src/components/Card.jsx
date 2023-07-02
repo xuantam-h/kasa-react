@@ -1,6 +1,6 @@
-const Card = () => {
+const Card = ({title, image}) => {
     return (
-      <p>Card</p>
+      <p>{title}</p>
     );
 }
   
