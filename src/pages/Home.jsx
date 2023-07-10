@@ -5,16 +5,22 @@ import Accomodations from '../logements.json';
 
 const Home = () => {
     return (
-      <div className="Home">
+      <div className="Home container">
         <Banner title="Chez vous, partout et ailleurs" src={BannerImage} alt="Test"/>
+        <div className="accomodations-list">
         {
           Accomodations.map( accomodation => {
             return (
-              <Card key={accomodation.id} title={accomodation.title} alt={accomodation.title} />
+              <Card 
+                  key={accomodation.id}
+                  title={accomodation.title}
+                  image={accomodation.cover}
+                  alt={accomodation.title} 
+              />
             );
           })
         }
-        <Card/>
+        </div>
       </div>
     );
 }

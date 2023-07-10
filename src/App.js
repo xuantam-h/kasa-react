@@ -1,4 +1,4 @@
-import './App.css';
+import './styles/App.scss';
 import Router from './components/Router';
 import Footer from './components/Footer'; 
 

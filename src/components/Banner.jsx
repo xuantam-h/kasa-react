@@ -1,3 +1,5 @@
+import '../styles/Banner.scss';
+
 const Banner = ({title, src, alt}) => {
     return (
         <div className="banner-container">

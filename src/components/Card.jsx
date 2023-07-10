@@ -1,8 +1,10 @@
-const Card = ({title, image}) => {
+const Card = ({title, image, alt}) => {
     return (
-      <p>{title}</p>
+      <article className="card">
+        <p>{title}</p>
+        <img src={image} alt={alt} />
+      </article>
     );
 }
   
 export default Card;
-  

@@ -1,3 +1,4 @@
+import '../styles/Footer.scss';
 import logo from '../assets/logo-w.svg'
 const currentYear = new Date().getFullYear();
 
