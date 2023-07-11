@@ -1,0 +1,18 @@
+@import "variables.scss";
+
+.Error{
+    text-align: center;
+    color:$primary;
+
+    .big-heading{
+        font-size:96px;
+        font-size:288px;
+        margin: 0;
+        font-weight: $headings-weight;
+    }
+
+    .subtitle{
+        margin:139px 0 139px 0;
+        font-size:36px;
+    }
+}

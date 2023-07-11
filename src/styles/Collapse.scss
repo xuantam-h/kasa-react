@@ -2,21 +2,27 @@
 
 .collapse{
     margin-bottom:20px;
+    margin-bottom:30px;
     font-size: 18px;
+
+    &-list{
+        width: 80%;
+        margin: 38px auto;
+    }
 
     &-header{
         background-color: $primary;
         color:$white;
         display: flex;
         justify-content: space-between;
-        border-radius: 10px;
+        border-radius: 5px;
         font-family: $font-family;
-        padding: 10px;
+        padding: 15px;
         outline:none;
         border:none;
         width:100%;
-        font-size: 18px;
-        
+        font-size: 24px;
+
         img{
             width:24px;
         }
@@ -31,19 +37,20 @@
 
         p{
             margin:0;
+            line-height: 1.4;
         }
     }
 
     &-hidden{
         opacity:0;
         max-height:0;
-        transition: max-height 250ms ease-in-out;
+        transition: all 250ms ease-in-out;
     }
 
     &-visible{
         opacity: 1;
         max-height:auto;
-        transition: max-height 250ms ease-in-out;
+        transition: all 250ms ease-in-out;
     }
 
 }
