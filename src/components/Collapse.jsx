@@ -18,7 +18,7 @@ const Collapse = ({title, content}) => {
       <div className="collapse">
         <button className="collapse-header" onClick={toggleState}>
           <span>{title}</span>
-          <img src={chevron} alt="Chevron" />
+          <img src={chevron} alt="Chevron" className={toggle ? 'chevron chevron-animated' : 'chevron chevron-default'} />
         </button>
         <div 
         className={toggle ? 'collapse-visible' : 'collapse-hidden'}

@@ -1,8 +1,10 @@
+import '../styles/Card.scss';
+
 const Card = ({title, image, alt}) => {
     return (
       <article className="card">
-        <p>{title}</p>
-        <img src={image} alt={alt} />
+        <h2 className="card-title">{title}</h2>
+        <img src={image} alt={alt} className="card-img" />
       </article>
     );
 }

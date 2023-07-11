@@ -2,6 +2,7 @@ import Banner from '../components/Banner';
 import BannerImage from '../assets/banner-home.jpg'; 
 import Card from '../components/Card';
 import Accomodations from '../logements.json';
+import '../styles/Home.scss';
 
 const Home = () => {
     return (
