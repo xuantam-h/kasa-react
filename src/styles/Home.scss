@@ -1,11 +1,20 @@
 @import "variables.scss";
+@import "mixins.scss";
 
 .accomodations-list{
-    background-color: $gray;
     display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap:50px 60px;
+    gap:20px;
     border-radius: 25px;
-    margin:45px 0 45px 0;
-    padding:50px;
+    
+    @include tablet{
+        margin:45px 0 45px 0;
+        background-color: $gray;
+        grid-template-columns: repeat(2,1fr);
+        gap:50px 60px;
+        padding:50px;
+    }
+
+    @include desktop{
+        grid-template-columns: repeat(3,1fr);
+    }
 }

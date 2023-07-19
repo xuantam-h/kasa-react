@@ -1,4 +1,5 @@
 @import "variables.scss";
+@import "mixins.scss";
 
 header.main-header{
     display: flex;
@@ -7,6 +8,9 @@ header.main-header{
     padding:50px 0 50px 0;
 
     img{
-        max-width: 210px;
+        max-width: 145px;
+        @include tablet{
+            max-width: 210px;  
+        }
     }
 }

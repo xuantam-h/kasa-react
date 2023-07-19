@@ -1,4 +1,5 @@
 @import "variables.scss";
+@import "mixins.scss";
 
 .banner-container{
     position: relative;
@@ -23,14 +24,18 @@
         transform: translate(-50%,-50%);
         margin: 0;
         font-size:1.5rem;
-        font-size:3rem;
         font-weight: 500;
         color:$white;
         white-space: nowrap;
+
+        @include tablet{
+            font-size:3rem;
+        }
     }
 
     img{
         width: 100%;
         object-fit: cover;
+        vertical-align: top;
     }
 }

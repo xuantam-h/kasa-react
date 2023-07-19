@@ -1,0 +1,51 @@
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+  }
+  
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
+@mixin flex-center-column {
+    @include flex-center;
+    flex-direction: column;
+}
+  
+@mixin flex-center-vert {
+    display: flex;
+    align-items: center;
+}
+  
+@mixin flex-center-horiz {
+    display: flex;
+    justify-content: center;
+}
+
+@mixin text-clip {
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+$tablet: 768;
+$desktop: 1024;
+
+@mixin tablet {
+  @media only screen and (min-width: $tablet * 1px) {
+    @content;
+  }
+}
+
+@mixin tablet-only {
+  @media only screen and (min-width: $tablet * 1px) and (max-width: $desktop * 1px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media only screen and (min-width: $desktop * 1px) {
+    @content;
+  }
+}
