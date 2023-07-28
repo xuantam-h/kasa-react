@@ -12,12 +12,13 @@ const Home = () => {
         {
           Accomodations.map( accomodation => {
             return (
-              <Card 
-                  key={accomodation.id}
-                  title={accomodation.title}
-                  image={accomodation.cover}
-                  alt={accomodation.title} 
-              />
+                <Card 
+                    key={accomodation.id}
+                    title={accomodation.title}
+                    image={accomodation.cover}
+                    alt={accomodation.title}
+                    link={accomodation.id}
+                />
             );
           })
         }

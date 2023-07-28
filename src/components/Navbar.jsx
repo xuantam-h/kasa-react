@@ -1,11 +1,11 @@
 import '../styles/Navbar.scss';
-import {Link} from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
 
 const Navbar = () => {
     return (
         <nav className="main-nav">
-            <Link to='/' className='test'>Accueil</Link>
-            <Link to='/about' className='test'>A propos</Link>
+            <NavLink to='/'>Accueil</NavLink>
+            <NavLink to='/about'>A propos</NavLink>
         </nav>
     );
 }
