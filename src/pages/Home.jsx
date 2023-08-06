@@ -17,7 +17,7 @@ const Home = () => {
                     title={accomodation.title}
                     image={accomodation.cover}
                     alt={accomodation.title}
-                    link={accomodation.id}
+                    id={accomodation.id}
                 />
             );
           })
