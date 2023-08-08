@@ -1,0 +1,57 @@
+@import "variables.scss";
+@import "mixins.scss";
+
+.accomodation{
+    &-container{
+        @include tablet{
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+    &-title{
+        color:$primary;
+        font-size:toRem(18);
+        font-weight: $font-weight;
+        margin-bottom: 0;
+        @include desktop{
+            font-size:toRem(36);
+        }
+    }
+
+    &-subtitle{
+        color:$primary;
+        font-size:toRem(14);
+        font-weight: $font-weight;
+        margin-top:toRem(5);
+        @include desktop{
+            font-size:toRem(18);
+        }
+    }
+
+    &-description{
+        
+        &> .collapse{
+            flex:1;
+        }
+        @include desktop{
+            display: flex;
+            gap:toRem(76);
+        }
+    }
+
+    &-tags{
+        display: flex;
+        list-style: none;
+        padding: 0;
+        gap:toRem(10);
+        margin:toRem(24) 0;
+
+        >li{
+            background-color: $primary;
+            color:$white;
+            border-radius: toRem(10);
+            text-align: center;
+            padding: toRem(7) toRem(20);
+        }
+    }
+}
