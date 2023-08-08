@@ -6,13 +6,14 @@
         @include tablet{
             display: flex;
             justify-content: space-between;
+            margin-top:toRem(30);
         }
     }
     &-title{
         color:$primary;
         font-size:toRem(18);
         font-weight: $font-weight;
-        margin-bottom: 0;
+        margin: 0;
         @include desktop{
             font-size:toRem(36);
         }
@@ -41,6 +42,7 @@
 
     &-tags{
         display: flex;
+        flex-wrap: wrap;
         list-style: none;
         padding: 0;
         gap:toRem(10);
@@ -54,4 +56,29 @@
             padding: toRem(7) toRem(20);
         }
     }
+
+    &-user{
+        display: flex;
+        align-items: center;
+        gap:toRem(10);
+
+        .accomodation-username{
+            font-size: toRem(12);
+            color:$primary;
+            margin:0;
+            @include tablet{
+                font-size: toRem(18);
+            }
+        }
+        img{
+            border-radius:50%;
+            height:toRem(32);
+            width: toRem(32);
+            @include tablet{
+                height:toRem(64);
+                width: toRem(64);
+            }
+        }
+    }
+
 }

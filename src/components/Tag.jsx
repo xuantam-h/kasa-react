@@ -1,8 +1,8 @@
-const Tag = () => {
+const Tag = ({content}) => {
     return (
-      <p>Tag</p>
+      <li className="accomodation-tag">{content}</li>
     );
 }
   
-  export default Tag;
+export default Tag;
   
