@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import Collapse from '../components/Collapse';
 import Slideshow from '../components/Slideshow';
 import Tag from '../components/Tag';
+import Host from '../components/Host';
 
 import Accomodations from '../logements.json';
 import '../styles/Accomodation.scss';
@@ -29,10 +30,7 @@ const Accomodation = () => {
               </ul>
             </div>
             <div className="accomodation-right">
-              <div className="accomodation-user">
-                <p className="accomodation-username">{currentAccomodation.host.name}</p>
-                <img src={currentAccomodation.host.picture} alt={currentAccomodation.host.name} />
-              </div>
+              <Host username={currentAccomodation.host.name} picture={currentAccomodation.host.picture}/>
               <div className="accomodation-ratings">
 
               </div>

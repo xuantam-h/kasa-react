@@ -3,6 +3,7 @@
 
 .accomodation{
     &-container{
+        margin-bottom:toRem(15);
         @include tablet{
             display: flex;
             justify-content: space-between;

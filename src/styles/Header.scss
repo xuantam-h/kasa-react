@@ -5,12 +5,15 @@ header.main-header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding:50px 0 50px 0;
+    padding:toRem(50) toRem(20); 
+    @include tablet{
+        padding:50px 0 50px 0;
+    }
 
     img{
-        max-width: 145px;
+        max-width: toRem(145);
         @include tablet{
-            max-width: 210px;  
+            max-width: toRem(210);  
         }
     }
 }
