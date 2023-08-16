@@ -11,7 +11,7 @@ import '../styles/Accomodation.scss';
 
 const Accomodation = () => {
 
-    /* Passing the id params in the URL */
+    /* Obtaining the id params passed in the URL */
     const {id} = useParams();
 
     /* Filtering to get the current accomodation information */
@@ -40,14 +40,12 @@ const Accomodation = () => {
             </div>
           </div>
           <div className="accomodation-description">
-              <Collapse 
-                title="Description"
-                content={currentAccomodation.description}
-              />
-              <Collapse 
-                title="Equipements"
-                content={listEquipments}
-              />
+              <Collapse title="Description">
+                <p>{currentAccomodation.description}</p>
+              </Collapse>
+              <Collapse title="Equipements">
+                <ul>{listEquipments}</ul>
+              </Collapse>
             </div>
         </div>
     );

@@ -5,6 +5,7 @@
     display: grid;
     gap:20px;
     border-radius: $border-radius;
+    margin-bottom:toRem(27);
     
     @include tablet{
         margin:45px 0 45px 0;
@@ -19,6 +20,7 @@
     }
 
     a{
+        min-height:toRem(255);
         @include tablet{
             min-height:toRem(340);
         }

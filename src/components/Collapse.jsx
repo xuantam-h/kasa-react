@@ -2,7 +2,7 @@ import {useState, useRef} from 'react'
 import chevron from '../assets/chevron.svg'
 import '../styles/Collapse.scss';
 
-const Collapse = ({title, content}) => {
+const Collapse = ({title, children}) => {
   
   const [toggle, setToggle] = useState(false);
   const [heightEl, setHeightEl] = useState();
@@ -25,7 +25,7 @@ const Collapse = ({title, content}) => {
         ref={refHeight}
         >
           <div className="collapse-body">
-            <p>{content}</p>
+            {children}
           </div>
         </div>
       </div>
