@@ -4,7 +4,11 @@
 .collapse{
     margin-bottom:20px;
     margin-bottom:30px;
-    font-size: 18px;
+    
+    font-size:toRem(13);
+    @include tablet {
+        font-size: toRem(18);
+    }
 
     &-list{
         width: 80%;

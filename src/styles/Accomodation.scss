@@ -82,4 +82,14 @@
         }
     }
 
+    &-right{
+        display: flex;
+        justify-content: space-between;
+        
+        @include tablet{
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+    }
+
 }

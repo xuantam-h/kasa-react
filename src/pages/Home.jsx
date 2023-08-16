@@ -1,6 +1,8 @@
 import Banner from '../components/Banner'; 
-import BannerImage from '../assets/banner-home.jpg'; 
 import Card from '../components/Card';
+
+import BannerImage from '../assets/banner-home.jpg'; 
+
 import Accomodations from '../logements.json';
 import '../styles/Home.scss';
 
@@ -10,7 +12,7 @@ const Home = () => {
         <Banner title="Chez vous, partout et ailleurs" src={BannerImage} alt="Test"/>
         <div className="accomodations-list">
         {
-          Accomodations.map( accomodation => {
+          Accomodations.map(accomodation => {
             return (
                 <Card 
                     key={accomodation.id}

@@ -1,0 +1,14 @@
+@import "variables.scss";
+@import "mixins.scss";
+
+.slider-container{
+    max-height: toRem(255);
+    overflow: hidden;
+    border-radius: toRem(10);
+    margin-bottom: toRem(15);
+    @include tablet{
+        max-height: toRem(415);
+        border-radius: toRem(25);
+        margin-bottom: 0;
+    }
+}

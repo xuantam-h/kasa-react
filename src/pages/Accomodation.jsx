@@ -4,6 +4,7 @@ import Collapse from '../components/Collapse';
 import Slideshow from '../components/Slideshow';
 import Tag from '../components/Tag';
 import Host from '../components/Host';
+import Rate from '../components/Rate';
 
 import Accomodations from '../logements.json';
 import '../styles/Accomodation.scss';
@@ -21,6 +22,7 @@ const Accomodation = () => {
 
     return (
         <div className="Accomodation container">
+          <Slideshow slides={currentAccomodation.pictures} />
           <div className="accomodation-container">
             <div className="accomodation-left">
               <h1 className="accomodation-title">{currentAccomodation.title}</h1>
@@ -30,10 +32,11 @@ const Accomodation = () => {
               </ul>
             </div>
             <div className="accomodation-right">
-              <Host username={currentAccomodation.host.name} picture={currentAccomodation.host.picture}/>
-              <div className="accomodation-ratings">
-
-              </div>
+              <Host 
+                username={currentAccomodation.host.name}
+                picture={currentAccomodation.host.picture}
+              />
+              <Rate score={currentAccomodation.rating}/>
             </div>
           </div>
           <div className="accomodation-description">

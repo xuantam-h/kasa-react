@@ -4,9 +4,9 @@
 .card{
     color:$white;
     position: relative;
-    border-radius: 10px;
+    border-radius: toRem(10);
     overflow: hidden;
-    min-height: 340px;
+    height: 100%;
 
     &-title{
         font-size:toRem(18);
@@ -17,7 +17,7 @@
         width: 100%;
         padding: toRem(20);
         font-weight: $font-weight;
-        background: linear-gradient(180deg, rgba(0, 0, 0, 0), $primary);
+        background: linear-gradient(180deg, rgba($primary, 0.5), $primary);
         box-sizing: border-box;
     }
 

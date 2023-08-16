@@ -6,14 +6,21 @@
     color:$primary;
 
     .big-heading{
-        font-size:96px;
-        font-size:288px;
+        font-size:toRem(96);
         margin: 0;
         font-weight: $headings-weight;
+        @include tablet{
+            font-size:toRem(288);
+        }
     }
 
     .subtitle{
-        margin:139px 0 139px 0;
-        font-size:36px;
+        margin:113px 0 113px 0;
+        font-size: $regular-size;
+
+        @include tablet{
+            font-size: toRem(36);
+            margin:139px 0 139px 0;
+        }
     }
 }

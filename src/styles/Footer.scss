@@ -5,15 +5,19 @@ footer{
     background-color: $black;
     color:$white;
     text-align: center;
-    padding:66px 0 29px 0;
+    padding:toRem(58) 0;
+    @include tablet{
+        padding:66px 0 29px 0; 
+    }
 
     p{
-        font-size:12px;
+        font-size:toRem(12);
         margin-bottom: 0;
-        margin-top:36px;
+        margin-top:toRem(10);
 
         @include tablet{
             font-size: 1.5rem;
+            margin-top:toRem(36);
         }
     }
 
