@@ -85,6 +85,7 @@
     &-right{
         display: flex;
         justify-content: space-between;
+        flex-direction: row-reverse;
         
         @include tablet{
             flex-direction: column;

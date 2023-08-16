@@ -4,7 +4,7 @@
 .accomodations-list{
     display: grid;
     gap:20px;
-    border-radius: 25px;
+    border-radius: $border-radius;
     
     @include tablet{
         margin:45px 0 45px 0;
@@ -16,5 +16,11 @@
 
     @include desktop{
         grid-template-columns: repeat(3,1fr);
+    }
+
+    a{
+        @include tablet{
+            min-height:toRem(340);
+        }
     }
 }

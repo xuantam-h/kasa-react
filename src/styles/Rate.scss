@@ -8,4 +8,11 @@
     @include tablet{
         margin-top:toRem(21);
     }
+
+    img{
+        width:toRem(13);
+        @include tablet{
+            width:toRem(24);
+        }
+    }
 }
