@@ -5,7 +5,10 @@ header.main-header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding:toRem(50) toRem(20); 
+    padding:toRem(20); 
+    @include tablet{
+        padding:toRem(50) toRem(20);
+    }
 
     img{
         max-width: toRem(145);

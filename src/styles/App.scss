@@ -20,3 +20,12 @@ img{
 a{
     color:$primary;
 }
+
+ul.list-none{
+    list-style: none;
+    margin:0;
+    padding:0;
+    li{
+        margin-bottom:toRem(5);
+    }
+}

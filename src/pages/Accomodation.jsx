@@ -28,7 +28,9 @@ const Accomodation = () => {
               <h1 className="accomodation-title">{currentAccomodation.title}</h1>
               <h2 className="accomodation-subtitle">{currentAccomodation.location}</h2>
               <ul className="accomodation-tags">
-                {currentAccomodation.tags.map((tag, index) => <Tag key={index} content={tag}/>)}
+                {currentAccomodation.tags.map((tag, index) => 
+                  <Tag key={index} content={tag} 
+                />)}
               </ul>
             </div>
             <div className="accomodation-right">
@@ -44,7 +46,7 @@ const Accomodation = () => {
                 <p>{currentAccomodation.description}</p>
               </Collapse>
               <Collapse title="Equipements">
-                <ul>{listEquipments}</ul>
+                <ul className="list-none">{listEquipments}</ul>
               </Collapse>
             </div>
         </div>

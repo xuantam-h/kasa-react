@@ -11,8 +11,10 @@
     }
 
     &-list{
-        width: 80%;
         margin: 38px auto;
+        @include tablet{
+            width: 80%;
+        }
     }
 
     &-header{
@@ -20,24 +22,32 @@
         color:$white;
         display: flex;
         justify-content: space-between;
-        border-radius: 5px;
+        border-radius: toRem(5);
         font-family: $font-family;
-        padding: 15px;
+        padding: toRem(10);
         outline:none;
         border:none;
         width:100%;
-        font-size: 24px;
+        font-size: toRem(13);
+        
         cursor: pointer;
+        @include tablet{
+            font-size: toRem(24);
+            padding: toRem(15);
+        }
 
         img{
-            width:24px;
+            width:toRem(16);
+            @include tablet{
+                width:toRem(24);
+            }
         }
     }
 
     &-body{
         background-color: $gray;
-        border-radius:10px;
-        padding:20px;
+        border-radius:toRem(10);
+        padding:toRem(20);
         color:$primary;
         font-weight: $regular-weight;
         pointer-events: none;

@@ -3,9 +3,12 @@
 
 .banner-container{
     position: relative;
-    border-radius: $border-radius;
+    border-radius: toRem(10);
     overflow: hidden;
     margin-bottom:toRem(20);
+    @include tablet{
+        border-radius: $border-radius;
+    }
 
     &:before{
         content:'';

@@ -20,7 +20,11 @@ const Slideshow = ({slides, title}) => {
       <div className='slider-container'>
         {slides.map((slide, index) => {
             return (
+                <>
+                <p onClick={prevSlide}></p>
+                <p onClick={nextSlide}></p>
                 <img src={slide} alt={title} key={index}/>
+                </>
             )
         })}
       </div>

@@ -1,8 +1,11 @@
-import logo from '../assets/logo.svg'
+import logo from '../assets/logo.svg';
+import {NavLink} from 'react-router-dom';
 
 const Logo = () => {
     return (
-      <img src={logo} alt='Logo Kasa' className='header-logo' />
+      <NavLink to='/'>
+        <img src={logo} alt='Logo Kasa' className='header-logo' />
+      </NavLink>
     );
 }
   
