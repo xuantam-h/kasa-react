@@ -1,14 +1,69 @@
 @import "variables.scss";
 @import "mixins.scss";
+@import "Animations.scss";
 
-.slider-container{
-    max-height: toRem(255);
-    overflow: hidden;
-    border-radius: toRem(10);
-    margin-bottom: toRem(15);
-    @include tablet{
-        max-height: toRem(415);
-        border-radius: $border-radius;
-        margin-bottom: 0;
+.slider{
+    &-container{
+        max-height: toRem(255);
+        overflow: hidden;
+        border-radius: toRem(10);
+        margin-bottom: toRem(15);
+        position: relative;
+        @include tablet{
+            max-height: toRem(415);
+            border-radius: $border-radius;
+            margin-bottom: 0;
+        }
     }
+
+    &-image{
+        height: toRem(255);
+        @include tablet{
+            height: toRem(415);
+        }
+        img{
+            width: 100%;
+            object-fit: cover;
+            height: 100%;
+            animation:fadeIn 250ms ease-in-out;
+        }
+    }
+
+    &-arrow{
+        position: absolute;
+        padding: 0;
+        background-color: transparent;
+        border: none;
+        top:50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+        &-prev{
+            left:toRem(24);
+        }
+
+        &-next{
+            right:toRem(24);
+            transform: translateY(-50%) rotate(180deg);
+        }
+    }
+
+    &-count{
+        display: none;
+        @include tablet{
+            display: block;
+            position: absolute;
+            bottom:toRem(24);
+            left:50%;
+            transform: translateX(-50%);
+            p{
+                font-size: toRem(18);
+                color:$white;
+                font-weight: $font-weight;
+                margin:0;
+            }
+        }
+        
+    }
+
+
 }

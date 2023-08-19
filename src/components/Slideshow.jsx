@@ -1,5 +1,6 @@
 import '../styles/Slideshow.scss';
 import {useState} from 'react';
+import sliderArrow from '../assets/slider-arrow.svg';
 
 const Slideshow = ({slides, title}) => {
 
@@ -8,27 +9,30 @@ const Slideshow = ({slides, title}) => {
     const slidesLength = slides.length;
 
     /* Defining click functions */
-    const prevSlide = () => {
+    const handlePrev = () => {
         setCurrent(current === 0 ? slidesLength - 1 : current - 1);
     };
 
-    const nextSlide = () => {
-        setCurrent(current === 0 ? slidesLength - 1 : current - 1);
+    const handleNext = () => {
+        setCurrent(current === 0 ? slidesLength - 1 : current + 1);
     };
 
     return (
       <div className='slider-container'>
-        {slides.map((slide, index) => {
-            return (
-                <>
-                <p onClick={prevSlide}></p>
-                <p onClick={nextSlide}></p>
-                <img src={slide} alt={title} key={index}/>
-                </>
-            )
-        })}
+        <button onClick={handlePrev} className='slider-arrow slider-arrow-prev'>
+          <img src={sliderArrow} alt="Slider arrow" />
+        </button>
+        <div className='slider-image'>
+          <img src={slides[current]} alt={title} />
+        </div>
+        <button onClick={handleNext} className='slider-arrow slider-arrow-next'>
+          <img src={sliderArrow} alt="Slider arrow" />
+        </button>
+        <div className='slider-count'>
+          <p>{current + 1} / {slidesLength}</p>
+        </div>
       </div>
-    );
+    )
 }
   
 export default Slideshow;

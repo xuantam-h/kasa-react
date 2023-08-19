@@ -34,6 +34,7 @@
         @include tablet{
             font-size: toRem(24);
             padding: toRem(15);
+            border-radius: toRem(10);
         }
 
         img{
