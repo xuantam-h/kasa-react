@@ -14,7 +14,7 @@ const Slideshow = ({slides, title}) => {
     };
 
     const handleNext = () => {
-        setCurrent(current === 0 ? slidesLength - 1 : current + 1);
+        setCurrent(current === slidesLength - 1 ? 0 : current + 1);
     };
 
     return (

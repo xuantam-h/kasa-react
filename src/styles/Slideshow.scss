@@ -38,12 +38,24 @@
         transform: translateY(-50%);
         cursor: pointer;
         &-prev{
-            left:toRem(24);
+            left:toRem(5);
+            @include tablet{
+                left:toRem(24); 
+            }
         }
 
         &-next{
-            right:toRem(24);
+            right:toRem(5);
             transform: translateY(-50%) rotate(180deg);
+            @include tablet{
+                right:toRem(24); 
+            }
+        }
+        img{
+            width: toRem(11);
+            @include tablet{
+                width:toRem(46);
+            }
         }
     }
 
