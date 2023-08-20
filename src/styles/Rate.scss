@@ -3,10 +3,12 @@
 
 .accomodation-ratings{
     display: flex;
-    gap:toRem(15);
+    gap:toRem(5);
     justify-content: space-between;
     @include tablet{
         margin-top:toRem(21);
+        gap:toRem(15);
+        justify-content: flex-end;
     }
 
     img{

@@ -11,9 +11,10 @@
     }
 
     &-list{
-        margin: 38px auto;
+        margin: toRem(20) auto;
         @include tablet{
             width: 80%;
+            margin: toRem(38) auto;
         }
     }
 
@@ -29,6 +30,8 @@
         border:none;
         width:100%;
         font-size: toRem(13);
+        position: relative;
+        z-index: 1;
         
         cursor: pointer;
         @include tablet{
@@ -47,11 +50,12 @@
 
     &-body{
         background-color: $gray;
-        border-radius:toRem(10);
+        border-radius:0 0 toRem(10) toRem(10);
         padding:toRem(20);
         color:$primary;
         font-weight: $regular-weight;
         pointer-events: none;
+        margin-top: toRem(-4);
 
         p{
             margin:0;
@@ -84,6 +88,9 @@
 
 .Accomodation{
     .collapse-header{
-        font-size:toRem(18);
+        font-size:toRem(13);
+        @include tablet{
+            font-size:toRem(18);
+        }
     }
 }
