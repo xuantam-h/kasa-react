@@ -1,3 +1,5 @@
+import { useEffect } from 'react';
+
 import Banner from '../components/Banner'; 
 import Card from '../components/Card';
 
@@ -7,6 +9,10 @@ import Accomodations from '../logements.json';
 import '../styles/Home.scss';
 
 const Home = () => {
+  useEffect(() => {
+    document.title='Accueil | Kasa'
+  }, []);
+
     return (
       <div className="Home container">
         <Banner title="Chez vous, partout et ailleurs" src={BannerImage} alt="Test"/>

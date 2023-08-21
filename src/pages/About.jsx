@@ -1,8 +1,13 @@
 import Banner from '../components/Banner';
 import BannerImage from '../assets/banner-about.jpg';
 import Collapse from '../components/Collapse';
+import { useEffect } from 'react';
 
 const About = () => {
+  useEffect(() => {
+    document.title='À propos | Kasa'
+  }, []);
+
     return (
       <div className="About container">
         

@@ -1,4 +1,5 @@
-import { useParams } from 'react-router-dom';
+import { useParams, Navigate } from 'react-router-dom';
+import { useEffect } from 'react';
 
 import Collapse from '../components/Collapse';
 import Slideshow from '../components/Slideshow';
@@ -19,6 +20,10 @@ const Accomodation = () => {
 
     /* Looping the equipments array to get list element in <li> markup */
     const listEquipments = currentAccomodation.equipments.map((equipment, index) => <li key={index}>{equipment}</li>)
+
+    useEffect(() => {
+      document.title='Page logement | Kasa'
+    }, []);
 
     return (
         <div className="Accomodation container">
