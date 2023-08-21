@@ -22,7 +22,7 @@ const Accomodation = () => {
     const listEquipments = currentAccomodation.equipments.map((equipment, index) => <li key={index}>{equipment}</li>)
 
     useEffect(() => {
-      document.title='Page logement | Kasa'
+      document.title=`${currentAccomodation.title} | Kasa`
     }, []);
 
     return (
