@@ -22,7 +22,7 @@ const Accomodation = () => {
     useEffect(() => {
       document.title=`Page logement | Kasa`
     }, []);
-
+    
     return (
       <>
       { currentAccomodation ? (

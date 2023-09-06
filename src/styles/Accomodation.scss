@@ -69,12 +69,15 @@
     &-user{
         display: flex;
         align-items: center;
+        justify-content: flex-end;
         gap:toRem(10);
 
         .accomodation-username{
             font-size: toRem(12);
             color:$primary;
             margin:0;
+            text-align: right;
+            line-height: 1.5;
             @include tablet{
                 font-size: toRem(18);
             }
