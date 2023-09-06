@@ -13,5 +13,9 @@ Host.propTypes = {
     username: PropTypes.string.isRequired,
     picture: PropTypes.string,
 }
+
+Host.defaultProps = {
+    username: 'Hôte'
+}
   
 export default Host;

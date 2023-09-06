@@ -15,7 +15,7 @@ const Home = () => {
 
     return (
       <div className="Home container">
-        <Banner title="Chez vous, partout et ailleurs" src={BannerImage} alt="Test"/>
+        <Banner title="Chez vous, partout et ailleurs" src={BannerImage} alt="Photo montrant une mer et des rochers"/>
         <div className="accomodations-list">
         {
           Accomodations.map(accomodation => {

@@ -17,7 +17,7 @@ const Router = () => {
             <Route path='*' element={<Error/>} />
           </Routes>
         </BrowserRouter>
-    );
-  }
+    )
+}
   
   export default Router;

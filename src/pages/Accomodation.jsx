@@ -1,13 +1,14 @@
+import Accomodations from '../logements.json';
+
 import { useParams, Navigate } from 'react-router-dom';
 import { useEffect } from 'react';
 
 import Collapse from '../components/Collapse';
-import Slideshow from '../components/Slideshow';
+import Gallery from '../components/Gallery';
 import Tag from '../components/Tag';
 import Host from '../components/Host';
 import Rate from '../components/Rate';
 
-import Accomodations from '../logements.json';
 import '../styles/Accomodation.scss';
 
 const Accomodation = () => {
@@ -18,16 +19,15 @@ const Accomodation = () => {
     /* Filtering to get the current accomodation information */
     const currentAccomodation = Accomodations.find((accomodation) => accomodation.id === id);
 
-    /* Looping the equipments array to get list element in <li> markup */
-    const listEquipments = currentAccomodation.equipments.map((equipment, index) => <li key={index}>{equipment}</li>)
-
     useEffect(() => {
-      document.title=`${currentAccomodation.title} | Kasa`
+      document.title=`Page logement | Kasa`
     }, []);
 
     return (
+      <>
+      { currentAccomodation ? (
         <div className="Accomodation container">
-          <Slideshow slides={currentAccomodation.pictures} />
+          <Gallery slides={currentAccomodation.pictures} />
           <div className="accomodation-container">
             <div className="accomodation-left">
               <h1 className="accomodation-title">{currentAccomodation.title}</h1>
@@ -51,11 +51,16 @@ const Accomodation = () => {
                 <p>{currentAccomodation.description}</p>
               </Collapse>
               <Collapse title="Equipements">
-                <ul className="list-none">{listEquipments}</ul>
+                <ul className="list-none">{currentAccomodation.equipments.map((equipment, index) => <li key={index}>{equipment}</li>)}</ul>
               </Collapse>
-            </div>
-        </div>
+          </div>
+      </div>
+      ) : (
+        // If there is a spelling mistake or an unknown ID in the accomodation URL, redirect the user to the homepage
+        <Navigate to='/' />
+      )}
+    </>
     );
-}
+};
 
 export default Accomodation;

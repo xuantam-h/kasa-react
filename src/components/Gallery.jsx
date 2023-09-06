@@ -1,8 +1,8 @@
-import '../styles/Slideshow.scss';
+import '../styles/Gallery.scss';
 import {useState} from 'react';
 import sliderArrow from '../assets/slider-arrow.svg';
 
-const Slideshow = ({slides, title}) => {
+const Gallery = ({slides, title}) => {
 
     /* Hook state for current item in slider */
     const [current, setCurrent] = useState(0); // Setting the default slide to be the first '0'
@@ -35,4 +35,4 @@ const Slideshow = ({slides, title}) => {
     )
 }
   
-export default Slideshow;
+export default Gallery;
