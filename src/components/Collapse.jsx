@@ -1,13 +1,10 @@
-import {useState, useRef} from 'react';
-import PropTypes from 'prop-types';
+import {useState} from 'react';
 import chevron from '../assets/chevron.svg';
 import '../styles/Collapse.scss';
 
 const Collapse = ({title, children}) => {
   
   const [toggle, setToggle] = useState(false);
-
-  const refHeight = useRef();
 
   const toggleState = () => {
     setToggle(!toggle)
@@ -22,7 +19,6 @@ const Collapse = ({title, children}) => {
         </button>
         <div 
         className={toggle ? 'collapse-visible' : 'collapse-hidden'}
-        ref={refHeight}
         >
           <div className="collapse-body">
             {toggle ? children : ''}
@@ -31,10 +27,6 @@ const Collapse = ({title, children}) => {
       </div>
       </>
     )
-}
-
-Collapse.propTypes = {
-  title: PropTypes.string.isRequired,
 }
 
 export default Collapse;

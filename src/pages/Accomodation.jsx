@@ -56,8 +56,8 @@ const Accomodation = () => {
           </div>
       </div>
       ) : (
-        // If there is a spelling mistake or an unknown ID in the accomodation URL, redirect the user to the homepage
-        <Navigate to='/' />
+        // If there is a spelling mistake or an unknown ID in the accomodation URL, redirect the user to the error component
+        <Navigate to='*' />
       )}
     </>
     );

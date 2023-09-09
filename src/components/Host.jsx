@@ -1,7 +1,5 @@
-import PropTypes from 'prop-types';
-
 const Host = ({username,picture}) => {
-    /* Splitting the name of the host into two variables firstName and lastName. */
+    /* Splitting the name of the username into two variables firstName and lastName. */
     const [firstName, lastName] = username.split(' ');
 
     return (
@@ -9,18 +7,9 @@ const Host = ({username,picture}) => {
             <p className="accomodation-username">
                 {firstName} <br/> {lastName}
             </p>
-            <img src={picture} alt={username} />
+            <img src={picture} alt={`Profil de ${username}`} />
         </div>
     )
-}
-
-Host.propTypes = {
-    username: PropTypes.string.isRequired,
-    picture: PropTypes.string,
-}
-
-Host.defaultProps = {
-    username: 'Hôte'
 }
   
 export default Host;
