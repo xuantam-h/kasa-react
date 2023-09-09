@@ -1,4 +1,4 @@
-import Accomodations from '../logements.json';
+import Accomodations from '../datas/logements.json';
 
 import { useParams, Navigate } from 'react-router-dom';
 import { useEffect } from 'react';

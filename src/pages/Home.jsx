@@ -5,7 +5,7 @@ import Card from '../components/Card';
 
 import BannerImage from '../assets/banner-home.jpg'; 
 
-import Accomodations from '../logements.json';
+import Accomodations from '../datas/logements.json';
 import '../styles/Home.scss';
 
 const Home = () => {
