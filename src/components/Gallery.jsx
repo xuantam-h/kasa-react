@@ -2,7 +2,7 @@ import '../styles/Gallery.scss';
 import {useState} from 'react';
 import sliderArrow from '../assets/slider-arrow.svg';
 
-const Gallery = ({slides, title}) => {
+const Gallery = ({slides}) => {
 
     /* Hook state for current item in slider */
     const [current, setCurrent] = useState(0); // Setting the default slide to be the first '0'
@@ -23,7 +23,7 @@ const Gallery = ({slides, title}) => {
           <img src={sliderArrow} alt="Slider arrow" />
         </button>
         <div className='slider-image'>
-          <img src={slides[current]} alt={title} />
+          <img src={slides[current]} alt=''/>
         </div>
         <button onClick={handleNext} className='slider-arrow slider-arrow-next'>
           <img src={sliderArrow} alt="Slider arrow" />

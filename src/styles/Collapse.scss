@@ -64,15 +64,19 @@
 
     &-hidden{
         opacity: 0;
-        max-height: 0;
-        transform:scaleY(0%);
+        /*max-height: 0;
+        transform:scaleY(0%);*/
+        height:0;
         transition: all 250ms ease-in-out;
+        overflow: hidden;
+        overflow-y: auto;
     }
 
     &-visible{
         opacity: 1;
-        max-height: max-content;
-        transform:scaleY(100%);
+        /*max-height: max-content;
+        transform:scaleY(100%);*/
+        height: fit-content;
         transition: all 250ms ease-in-out;
     }
 }

@@ -15,12 +15,20 @@
     }
 
     .subtitle{
-        margin:113px 0 113px 0;
+        margin:toRem(113) 0 toRem(113) 0;
         font-size: $regular-size;
 
         @include tablet{
             font-size: toRem(36);
-            margin:139px 0 139px 0;
+            margin:toRem(139) 0 toRem(139) 0;
+        }
+    }
+
+    a{
+        display: block;
+        margin-bottom:toRem(113);
+        @include tablet{
+            margin-bottom:toRem(139);
         }
     }
 }
