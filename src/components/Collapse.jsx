@@ -21,7 +21,7 @@ const Collapse = ({title, children}) => {
         className={toggle ? 'collapse-visible' : 'collapse-hidden'}
         >
           <div className="collapse-body">
-            {toggle ? children : ''}
+            {toggle && children}
           </div>
         </div>
       </div>
