@@ -19,18 +19,32 @@ const Gallery = ({slides}) => {
 
     return (
       <div className='slider-container'>
-        <button onClick={handlePrev} className='slider-arrow slider-arrow-prev'>
-          <img src={sliderArrow} alt="Slider arrow" />
-        </button>
+        
+        { // The slider buttons won't show up if there isn't more than 1 slide
+          slidesLength > 1 && (
+          <button onClick={handlePrev} className='slider-arrow slider-arrow-prev'>
+            <img src={sliderArrow} alt="Slider arrow" />
+          </button>
+        )}
+
         <div className='slider-image'>
           <img src={slides[current]} alt=''/>
         </div>
-        <button onClick={handleNext} className='slider-arrow slider-arrow-next'>
-          <img src={sliderArrow} alt="Slider arrow" />
-        </button>
-        <div className='slider-count'>
-          <p>{current + 1}/{slidesLength}</p>
-        </div>
+
+        { // The slider buttons won't show up if there isn't more than 1 slide
+          slidesLength > 1 && (
+          <button onClick={handleNext} className='slider-arrow slider-arrow-next'>
+            <img src={sliderArrow} alt="Slider arrow" />
+          </button>
+        )}
+        
+        { // Won't display the count if there isn't more than 1 slide
+          slidesLength > 1 && (
+          <div className='slider-count'>
+            <p>{current + 1}/{slidesLength}</p>
+          </div>
+        )}
+        
       </div>
     )
 }

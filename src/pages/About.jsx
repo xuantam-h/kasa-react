@@ -10,7 +10,6 @@ const About = () => {
 
     return (
       <div className="About container">
-        
         <Banner 
             title="A propos"
             src={BannerImage}
